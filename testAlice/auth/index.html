@@ -1,0 +1,130 @@
+<html lang="ru" m_init="2372567202401301453">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlZota</title>
+    <base href="/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://control.zota.ru/css/site.css" rel="stylesheet">
+    <link href="https://control.zota.ru/css/Elements.css" rel="stylesheet">
+</head>
+<body>
+<div class="Menu ">
+    <div class="Menu__head">
+        <div style="cursor:pointer">
+            <div style="color: #EF8206; display: flex; align-items: center;">
+                <svg width="14" height="24" viewBox="0 0 14 24" fill="none">
+                    <path d="M13 22.9998L2 11.6794L13 0.999756" stroke="#FF7A1B" stroke-width="2"></path>
+                </svg>
+
+                <p class="ms-2" style="text-align: center; margin:auto;">
+                    Назад
+                </p>
+            </div>
+        </div><!--!-->
+        <div class="text-end" style="color: #EF8206; cursor:pointer; width: 160px;"><!--!--><!--!-->
+            <div style="height: 100%;">
+                <span>
+                    <svg class="close-icon" width="40" height="40" viewBox="0 0 40 40"
+                                                  fill="none" xmlns="http://www.w3.org/2000/svg"><path
+                    fill-rule="evenodd" clip-rule="evenodd"
+                    d="M21.4109 19.4213L34.8712 33.0246L33.4707 34.44L20.0097 20.8361L6.26836 34.7114L4.86719 33.2965L18.6091 19.4207L5.45941 6.13126L6.85997 4.71582L20.0103 18.0058L32.8906 5L34.2918 6.41483L21.4109 19.4213Z"
+                    fill="#FF7A1B"></path></svg>
+                </span>
+            </div>
+        </div>
+    </div>
+    <h1></h1>
+    <div style="overflow:auto; padding:14px"></div>
+</div>
+<button class="BackMenuBtn "></button>
+<div class="main">
+    <div class="inner-container Body">
+        <div class="login">
+            <div class="login__logo">
+                <svg class="zota-logo" width="190" height="54" viewBox="0 0 190 54" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M84.6809 28.1889H66.3495L73.4161 9.02612H91.6983L84.6809 28.1889ZM155.397 37.2021L162.155 28.1889H173.63L169.444 11.6216L149.044 37.2021H134.246L163.608 0H178.973L189.031 37.2021H155.397ZM112.911 37.2021L122.895 9.02612H109.82L112.775 0H152.836L148.872 9.02612H136.868L126.884 37.2021H112.911ZM44.1523 37.2021H0.0166016L32.0997 9.02612H12.5741L17.1661 0H58.2241L26.1903 28.1889H47.4764L44.1523 37.2021ZM105.204 1.88528C104.022 0.632732 102.446 0 100.464 0H69.6612C67.6791 0 65.7955 0.632732 64.0104 1.88528C62.2499 3.12492 61.1665 4.63573 60.7356 6.41771L51.6868 30.7456C51.2559 32.5405 51.613 34.0513 52.7702 35.3168C53.9398 36.5693 55.5279 37.2021 57.51 37.2021H88.3127C90.2948 37.2021 92.1784 36.5693 93.9636 35.3168C95.7118 34.0255 96.8075 32.5147 97.2384 30.7456L106.275 6.41771C106.706 4.63573 106.349 3.12492 105.204 1.88528Z"
+                          fill="black"></path>
+                    <path d="M190 53.9999H0V47.5713H190V53.9999Z" fill="#FF7A1B"></path>
+                </svg>
+            </div><!--!-->
+            <div class="login__wrapper">
+                <form action="/auth" method="post" id="auth">
+                    <div class="login__left"><!--!--><!--!-->
+                    <div class="login__right">
+                        <div class="form-signin"><!--!-->
+                            <h2 class="font-weight-light">Вход</h2>
+                            <h3 class="label" for="inputUsername">Логин</h3>
+                            <input id="inputUsername"
+                                   class="form-control mb-4"
+                                   type="text"
+                                   required=""
+                                   autofocus=""
+                                   name="username" />
+
+                            <h3 class="label" for="inputPassword">Пароль</h3>
+                            <div class="position-relative">
+                                <input type="password"
+                                       id="inputPassword"
+                                       class="form-control"
+                                       required=""
+                                       name="password" />
+
+                                <div id="PassEye" onclick="TogglePasswordVisibility()">
+                                    <svg width="27" height="17" viewBox="0 0 27 17" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="path-1-inside-1_2_1929" fill="white">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M10.3032 7.5C11.9601 7.5 13.3032 6.15685 13.3032 4.5C13.3032 4.15042 13.2434 3.81481 13.1335 3.50283C13.1899 3.50095 13.2464 3.5 13.3032 3.5C16.0646 3.5 18.3032 5.73858 18.3032 8.5C18.3032 11.2614 16.0646 13.5 13.3032 13.5C10.5418 13.5 8.30322 11.2614 8.30322 8.5C8.30322 7.95396 8.39075 7.42837 8.55254 6.93649C9.04523 7.29112 9.64983 7.5 10.3032 7.5Z"></path>
+                                        </mask>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M10.3032 7.5C11.9601 7.5 13.3032 6.15685 13.3032 4.5C13.3032 4.15042 13.2434 3.81481 13.1335 3.50283C13.1899 3.50095 13.2464 3.5 13.3032 3.5C16.0646 3.5 18.3032 5.73858 18.3032 8.5C18.3032 11.2614 16.0646 13.5 13.3032 13.5C10.5418 13.5 8.30322 11.2614 8.30322 8.5C8.30322 7.95396 8.39075 7.42837 8.55254 6.93649C9.04523 7.29112 9.64983 7.5 10.3032 7.5Z"
+                                              fill="#5F6162"></path>
+                                        <path d="M13.1335 3.50283L13.1002 2.50338L11.7372 2.54884L12.1903 3.83512L13.1335 3.50283ZM8.55254 6.93649L9.13674 6.12487L8.02905 5.32756L7.60261 6.62403L8.55254 6.93649ZM12.3032 4.5C12.3032 5.60457 11.4078 6.5 10.3032 6.5V8.5C12.5124 8.5 14.3032 6.70914 14.3032 4.5H12.3032ZM12.1903 3.83512C12.2632 4.04183 12.3032 4.26516 12.3032 4.5H14.3032C14.3032 4.03568 14.2237 3.58778 14.0767 3.17053L12.1903 3.83512ZM13.1668 4.50227C13.2121 4.50076 13.2575 4.5 13.3032 4.5V2.5C13.2353 2.5 13.1676 2.50113 13.1002 2.50338L13.1668 4.50227ZM13.3032 4.5C15.5124 4.5 17.3032 6.29086 17.3032 8.5H19.3032C19.3032 5.18629 16.6169 2.5 13.3032 2.5V4.5ZM17.3032 8.5C17.3032 10.7091 15.5124 12.5 13.3032 12.5V14.5C16.6169 14.5 19.3032 11.8137 19.3032 8.5H17.3032ZM13.3032 12.5C11.0941 12.5 9.30322 10.7091 9.30322 8.5H7.30322C7.30322 11.8137 9.98951 14.5 13.3032 14.5V12.5ZM9.30322 8.5C9.30322 8.06143 9.37344 7.64125 9.50248 7.24894L7.60261 6.62403C7.40806 7.21549 7.30322 7.8465 7.30322 8.5H9.30322ZM10.3032 6.5C9.86637 6.5 9.46492 6.3611 9.13674 6.12487L7.96835 7.7481C8.62553 8.22114 9.43329 8.5 10.3032 8.5V6.5Z"
+                                              fill="#5F6162" mask="url(#path-1-inside-1_2_1929)"></path>
+                                        <path d="M13.5731 16C8.1043 16 3.34186 12.9726 0.87154 8.5C3.34186 4.02741 8.1043 1 13.5731 1C19.0419 1 23.8044 4.02741 26.2747 8.5C23.8044 12.9726 19.0419 16 13.5731 16Z"
+                                              stroke="#5F6162"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                        <div class="form-check mb-3" style="padding-left: 0">
+                            <label class="ZOrange" style="cursor: pointer"><!--!-->Забыли пароль?</label>
+                        </div>
+                    </div>
+                    <div class="LoginButton">
+                        <button class="ZSButton" type="submit">Войти</button>
+                    </div>
+                </div>
+            </div><!--!-->
+                </form>
+        </div>
+    </div><!--!-->
+    <!--!-->
+</div><!--!-->
+
+<script>
+    let authForm = document.querySelector("form#auth");
+
+    document.addEventListener("DOMContentLoaded", () => {
+        authForm.addEventListener("submit", e => {
+            e.preventDefault();
+
+            let url = authForm.getAttribute("action");
+
+            let authFormData = new URLSearchParams();
+            authFormData.set("username", authForm.querySelector("input[name=username]").value);
+            authFormData.set("password", authForm.querySelector("input[name=password]").value);
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", url, true);
+            xhr.send( authFormData );
+
+        });
+    });
+</script>
+
+</body>
+</html>
