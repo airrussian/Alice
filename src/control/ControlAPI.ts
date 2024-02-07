@@ -46,7 +46,7 @@ export class ControlAPI {
             headers: { Authorization: `Bearer ${token}`},
         });
         if ( !response.ok ) throw new Error("Ошибка получение списка котлов");
-        return "ok";
+        return "ok12";
     }
 
 }

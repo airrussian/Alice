@@ -1,11 +1,11 @@
 export interface ControlBoilerResponse {
     "Id": number,
-    "CascadeId": boolean,
+    "CascadeId": boolean | null,
     "BoilerName": string,
     "PhoneNumber": string,
     "USSDRequest": string,
     "BoilerConnection": number,
-    "Password": string,
+    "Password": number,
     "InternetConnection": boolean,
     "LanConnection": boolean,
     "GSMConnection": boolean,

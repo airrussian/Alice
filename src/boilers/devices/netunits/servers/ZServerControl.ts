@@ -18,7 +18,7 @@ export class ZServerControl implements ZServer {
         this._socket.write( frame.toBuffer() );
     }
 
-    notifyListeners( data ) {
+    notifyListeners( data: Buffer ) {
         this._listeners.forEach( listener => listener( data ));
     }
 

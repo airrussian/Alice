@@ -13,7 +13,7 @@
 //         res.status(200).send("ok");
 //     }
 //
-//     public zAlice( req: Request, res: Response, next: Function) {
+//     public index( req: Request, res: Response, next: Function) {
 //
 //     }
 //
